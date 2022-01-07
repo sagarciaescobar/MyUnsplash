@@ -1,23 +1,25 @@
 #container {
     width: 100%;
-    max-width: 700px;
+    max-width: 1440px;
     margin: 2em auto;
     margin: 0 auto;
-    width: 990px;
 }
 
 .cols {
     -moz-column-count:3;
-    -moz-column-gap: 3%;
+    -moz-column-gap: 4.5rem;
     -moz-column-width: 30%;
     -webkit-column-count:3;
-    -webkit-column-gap: 3%;
+    -webkit-column-gap: 4.5rem;
     -webkit-column-width: 30%;
     column-count: 3;
-    column-gap: 3%;
+    column-gap: 4.5rem;
     column-width: 30%;
 }
 
-.box-img img {
+.box-img {
   max-width: 100%;
+  object-fit: cover;
+  margin-bottom: 4.5rem;
+  border-radius: 1.6rem;
 }

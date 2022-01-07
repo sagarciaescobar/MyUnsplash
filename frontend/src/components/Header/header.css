@@ -1,4 +1,23 @@
 .header_container{
-    height: 50px;
-    background-color: black;
+    height: 15rem;
+    display: flex;
+    padding: 3rem 0;
+    justify-content: space-between;
+}
+.header_container_logo{
+    width: 14rem;
+}
+.header_container_btn{
+    margin: auto 0;
+    height: 5rem;
+    width: 14rem;
+    background: #3DB46D;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #FFFFFF;
 }

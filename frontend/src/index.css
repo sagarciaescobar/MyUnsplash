@@ -12,3 +12,8 @@ html{
   -moz-osx-font-smoothing: grayscale;
   font-size: 10px;
 }
+body{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding:  0 10rem;
+}
