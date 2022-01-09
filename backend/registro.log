@@ -1,0 +1,65 @@
+2022-18-08 16:18:05.117  INFO --- [PRODUCTS-API  ] [GlobalHandlerException: 16] Esti es una prueba
+2022-18-08 16:18:53.319  INFO --- [PRODUCTS-API  ] [GlobalHandlerException: 16] Esti es una prueba
+2022-20-08 16:20:16.210  INFO --- [PRODUCTS-API  ] [GlobalHandlerException: 16] Esti es una prueba
+2022-16-08 18:16:45.700  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 36] Username is: default
+2022-16-08 18:16:45.703  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 37] Password is: password
+2022-17-08 18:17:05.634  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 36] Username is: default
+2022-17-08 18:17:05.636  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 37] Password is: password
+2022-20-08 18:20:57.720  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 35] Username is: default
+2022-20-08 18:20:57.722  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 36] Password is: password
+2022-28-08 18:28:21.546  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 35] Username is: default
+2022-28-08 18:28:21.549  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 36] Password is: password
+2022-28-08 18:28:21.623  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-40-08 18:40:48.791  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 35] Username is: default
+2022-40-08 18:40:48.793  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 36] Password is: password
+2022-40-08 18:40:48.867  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-59-08 18:59:42.499  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-59-08 18:59:42.502  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-03-08 19:03:16.074  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-03-08 19:03:16.076  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-03-08 19:03:16.160  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-28-08 19:28:47.467  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-28-08 19:28:47.470  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-28-08 19:28:47.754  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-47-08 19:47:27.815  INFO --- [PRODUCTS-API  ] [ImageController   : 49] Con url: default
+2022-48-08 19:48:24.999  INFO --- [PRODUCTS-API  ] [ImageController   : 49] Con url: url
+2022-48-08 19:48:40.707  INFO --- [PRODUCTS-API  ] [ImageController   : 43] Con archivo: url
+2022-43-08 20:43:25.852  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 51] 200
+2022-44-08 20:44:18.720  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 51] 200
+2022-45-08 20:45:22.515  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 51] 200
+2022-45-08 20:45:57.227  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 51] 200
+2022-05-08 21:05:44.824  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 59] jdk.internal.net.http.ResponseSubscribers$HttpResponseInputStream@3cce7963
+2022-12-08 21:12:26.840  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 59] java.net.http.HttpHeaders@12b1cb62 { {:status=[200], accept-ranges=[bytes], access-control-allow-origin=[*], age=[117905], cache-control=[public, max-age=315360000], content-length=[135444], content-type=[image/jpeg], cross-origin-resource-policy=[cross-origin], date=[Sun, 09 Jan 2022 02:12:27 GMT], last-modified=[Fri, 07 Jan 2022 17:27:22 GMT], server=[imgix], set-cookie=[ugid=15d32f31ff7fd7a8c23522e113cddeda5472314;domain=.unsplash.com;path=/;expires=Mon, 09 Jan 2023 02:12:27 GMT;SameSite=None;Secure], x-cache=[HIT, HIT], x-content-type-options=[nosniff], x-imgix-id=[1f50888016f829c5356bced7e42d70c4e3051a6b], x-served-by=[cache-sjc10081-SJC, cache-fty21350-FTY]} }
+2022-14-08 21:14:39.790  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 59] [image/jpeg]
+2022-15-08 21:15:23.267  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 59] [image/jpeg]
+2022-16-08 21:16:29.667  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 59] image/jpeg
+2022-21-08 21:21:05.748  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 63] sun.awt.image.URLImageSource@3a8f0bf
+2022-22-08 21:22:24.370  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 63] /photo-1641576369369-870158b0d11b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODkyOTZ8MHwxfGFsbHw0fHx8fHx8Mnx8MTY0MTYxNDAwNg&ixlib=rb-1.2.1&q=80&w=1080
+2022-23-08 21:23:40.608  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 63] 
+2022-25-08 21:25:56.787  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 63] crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODkyOTZ8MHwxfGFsbHw0fHx8fHx8Mnx8MTY0MTYxNDAwNg&ixlib=rb-1.2.1&q=80&w=1080
+2022-26-08 21:26:41.318  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 63] /photo-1641576369369-870158b0d11b
+2022-36-08 21:36:59.458  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 69] Cargando imagen
+2022-37-08 21:37:45.198  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 92] descargando imagen
+2022-38-08 21:38:32.265  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 92] descargando imagen
+2022-38-08 21:38:44.064  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 92] descargando imagen
+2022-39-08 21:39:23.350  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 92] descargando imagen
+2022-13-08 23:13:28.219  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 61] 
+2022-13-08 23:13:28.222  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 62] jpeg
+2022-13-08 23:13:28.222  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 63] image
+2022-13-08 23:13:28.223  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 64] image/jpeg
+2022-54-08 23:54:10.593  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 90] Guardando imagen por Archivo con id: 1984991e-6cad-4d5d-ada5-fbde7e26b0b1
+2022-56-08 23:56:34.625  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 64] Guardando imagen por Url con id: 57ac4330-53f7-4b2d-9700-92cea16d42ef
+2022-03-09 00:03:40.985  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 38] Listando todas las imagenes
+2022-17-09 00:17:35.721  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 39] Listando todas las imagenes
+2022-19-09 00:19:21.222  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-19-09 00:19:21.223  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-19-09 00:19:21.357  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-51-09 00:51:35.970  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-51-09 00:51:35.973  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-51-09 00:51:36.226  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-53-09 00:53:42.605  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 91] Guardando imagen por Archivo con id: d9061654-cf09-44aa-8a7f-b72ee77a4e95
+2022-53-09 00:53:44.861  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 91] Guardando imagen por Archivo con id: 01a7ac06-47fc-432a-abef-f462cfba891c
+2022-54-09 00:54:24.555  ERROR--- [PRODUCTS-API  ] [CustomAuthorizationFilter: 54] Error loggin The Token has expired on Sun Jan 09 00:53:36 COT 2022.
+2022-54-09 00:54:31.119  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-54-09 00:54:31.120  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-54-09 00:54:31.123  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
