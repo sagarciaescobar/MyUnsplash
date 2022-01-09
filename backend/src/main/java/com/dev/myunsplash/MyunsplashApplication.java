@@ -23,16 +23,4 @@ public class MyunsplashApplication {
 	PasswordEncoder passwordEncoder(){
 		return new BCryptPasswordEncoder();
 	}
-
-	/*@Bean
-	CommandLineRunner run(UserServiceImpl userService){
-		return args -> {
-			userService.saveRole(new Role(null,"ROLE_USER"));
-			userService.saveRole(new Role(null,"ROLE_ADMIN"));
-			userService.saveUser(new AppUser(null,"default","password",new ArrayList<>()));
-			userService.saveUser(new AppUser(null,"defaultadmin","password-admin",new ArrayList<>()));
-			userService.addRoleToUser("default","ROLE_USER");
-			userService.addRoleToUser("defaultadmin","ROLE_ADMIN");
-		};
-	}*/
 }

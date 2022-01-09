@@ -63,3 +63,35 @@
 2022-54-09 00:54:31.119  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
 2022-54-09 00:54:31.120  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
 2022-54-09 00:54:31.123  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-03-09 08:03:18.139  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 39] Listando todas las imagenes
+2022-09-09 08:09:28.236  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 58] Guardando imagen por Url con id: 62ac97f7-a2ab-4583-9458-3abe5e4096c9
+2022-09-09 08:09:49.648  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 84] Guardando imagen por Archivo con id: 8b3cbf9b-1738-4207-aaaf-660574f8c8cc
+2022-12-09 08:12:07.339  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-12-09 08:12:07.339  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-12-09 08:12:07.476  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-14-09 08:14:03.292  ERROR--- [PRODUCTS-API  ] [CustomAuthorizationFilter: 54] Error loggin The Token's Signature resulted invalid when verified using the Algorithm: HmacSHA256
+2022-14-09 08:14:07.543  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-14-09 08:14:07.543  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-14-09 08:14:07.546  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-14-09 08:14:17.629  ERROR--- [PRODUCTS-API  ] [CustomAuthorizationFilter: 54] Error loggin The Token's Signature resulted invalid when verified using the Algorithm: HmacSHA256
+2022-15-09 08:15:44.215  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 39] Listando todas las imagenes
+2022-17-09 08:17:38.020  ERROR--- [PRODUCTS-API  ] [CustomAuthorizationFilter: 54] Error loggin The Token's Signature resulted invalid when verified using the Algorithm: HmacSHA256
+2022-18-09 08:18:12.651  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-18-09 08:18:12.651  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-18-09 08:18:12.657  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-15-09 10:15:30.091  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 64] Guardando imagen por Url con id: f73afcf9-f51b-4008-83b2-ba1535366781
+2022-24-09 10:24:27.842  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 64] Guardando imagen por Url con id: f20abed5-5446-4c69-9cf6-98466b3d1c45
+2022-26-09 10:26:50.176  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 64] Guardando imagen por Url con id: ea6d13bd-84e4-4171-820b-ef94b35a4f99
+2022-29-09 10:29:49.203  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-29-09 10:29:49.205  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-29-09 10:29:49.520  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-30-09 10:30:06.712  ERROR--- [PRODUCTS-API  ] [CustomAuthorizationFilter: 54] Error loggin The Token has expired on Sun Jan 09 08:20:12 COT 2022.
+2022-30-09 10:30:25.000  ERROR--- [PRODUCTS-API  ] [CustomAuthorizationFilter: 54] Error loggin Request processing failed; nested exception is java.lang.Exception: Este id no existe
+2022-34-09 10:34:41.268  ERROR--- [PRODUCTS-API  ] [CustomAuthorizationFilter: 54] Error loggin The Token has expired on Sun Jan 09 10:31:49 COT 2022.
+2022-34-09 10:34:46.806  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-34-09 10:34:46.808  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-34-09 10:34:47.056  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-35-09 10:35:50.476  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 40] Username is: default
+2022-35-09 10:35:50.479  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
+2022-35-09 10:35:50.843  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
+2022-55-09 12:55:06.516  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 65] Guardando imagen por Url con id: 28cb4dec-efe1-4207-98f5-c033fa115096

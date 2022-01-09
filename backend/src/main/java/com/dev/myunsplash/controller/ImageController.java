@@ -1,5 +1,6 @@
 package com.dev.myunsplash.controller;
 
+import com.dev.myunsplash.exception.NoSuchAImage;
 import com.dev.myunsplash.model.Image;
 import com.dev.myunsplash.service.ImageServiceImpl;
 import lombok.extern.log4j.Log4j;
@@ -47,7 +48,7 @@ public class ImageController {
     }
 
     @PostMapping(value = "/images/save",params = {"url","label"})
-    public ResponseEntity<Image> saveByUrl(@RequestParam("url") String url,@RequestParam("label") String label) throws IOException, URISyntaxException, InterruptedException {
+    public ResponseEntity<Image> saveByUrl(@RequestParam("url") String url,@RequestParam("label") String label) throws IOException, URISyntaxException, InterruptedException, NoSuchAImage {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/images/save").toUriString());
         return ResponseEntity.created(uri).body(imageServiceImpl.saveByUrl(url,label));
     }
