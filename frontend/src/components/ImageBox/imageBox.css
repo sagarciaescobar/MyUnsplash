@@ -1,0 +1,42 @@
+.box_img {
+    position: relative;
+	max-width: 100%;
+	margin-bottom: 4.5rem;
+	border-radius: 1.6rem;
+}
+.box_img > img {
+	width: 100%;
+	object-fit: cover;
+	border-radius: 1.6rem;
+}
+.box_img_delete_btn{
+    background-color: #0000007e;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    border-radius: 1.6rem;
+    width: 6.5rem;
+    height: 3rem;
+    border: 0.2rem solid #EB5757;
+    font-weight: bold;
+    color: #EB5757;
+}
+
+.box_img_delete_btn:hover{
+    background-color: #000000e5;
+}
+
+.box_img_label{
+    background-color: #0000007e;
+    border-radius: 0 0 1.6rem 1.6rem;
+    position: absolute;
+    bottom: 3px;
+    left: 0rem;
+    width: 100%;
+    padding: 2rem;
+    color: white;
+    font-size: 1.6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

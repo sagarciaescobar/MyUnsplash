@@ -5,9 +5,11 @@ import com.dev.myunsplash.exception.NoSuchAImage;
 import com.dev.myunsplash.model.Image;
 import com.dev.myunsplash.repository.ImageRepository;
 import com.dev.myunsplash.util.imageConversion;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -22,6 +24,9 @@ import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.Clock;
 import java.time.Duration;
 import java.util.List;
 import java.util.Objects;
@@ -32,16 +37,17 @@ import static java.time.temporal.ChronoUnit.SECONDS;
 
 @Service
 @Log4j
+@RequiredArgsConstructor
 public class ImageServiceImpl implements IImageService{
 
-    @Autowired
-    ImageRepository imageRepository;
+    private final ImageRepository imageRepository;
+    private final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
 
     /*-----------------------------------------Search all-----------------------------------------------------------*/
     @Override
     public List<Image> findAll() {
         log.info("Listando todas las imagenes");
-        return imageRepository.findAll();
+        return imageRepository.findAll(Sort.by(Sort.Direction.DESC,"uploadDate"));
     }
 
     /*-----------------------------------------Save by URL-----------------------------------------------------------*/
@@ -56,11 +62,14 @@ public class ImageServiceImpl implements IImageService{
         HttpResponse<byte[]> response = HttpClient.newBuilder()
                 .build()
                 .send(request, HttpResponse.BodyHandlers.ofByteArray());
+        System.out.println(response.headers().toString());
+        System.out.println(response.body());
         MediaType contentType = MediaType.parseMediaType(response.headers().map().get("content-type").get(0));
-        if(contentType.includes(MediaType.IMAGE_JPEG) || contentType.includes(MediaType.IMAGE_PNG) || contentType.includes(MediaType.IMAGE_GIF)){
+        if(contentType.getType().startsWith("image")){
             String urlPath = new URL(stringUrl).toURI().getPath();
             Image image = new Image(urlPath + "." + contentType.getSubtype(),label ,contentType.toString(),null, stringUrl);
             image.setFileUrl(stringUrl);
+            image.setUploadDate(sdf.format(new Timestamp(System.currentTimeMillis())));
             Image img = imageRepository.save(image);
             log.info("Guardando imagen por Url con id: "+img.getFileId());
             return img;
@@ -82,7 +91,7 @@ public class ImageServiceImpl implements IImageService{
             }
         }
         MediaType contentType = MediaType.parseMediaType(Objects.requireNonNull(file.getContentType()));
-        if(contentType.includes(MediaType.IMAGE_JPEG) || contentType.includes(MediaType.IMAGE_PNG) || contentType.includes(MediaType.IMAGE_GIF)){
+        if(contentType.getType().startsWith("image")){
             Image image = new Image( file.getOriginalFilename(),label,file.getContentType());
             Image imageSave = imageRepository.save(image);
             String FILE_DIRECTORY = "./storage/uploaded_";
@@ -92,6 +101,7 @@ public class ImageServiceImpl implements IImageService{
             image.setFilePath(path.toString());
             image.setFileId(imageSave.getFileId());
             image.setFileUrl("https://myunsplash-app.herokuapp.com/"+image.getFileId());
+            image.setUploadDate(sdf.format(new Timestamp(System.currentTimeMillis())));
             Image img = imageRepository.save(image);
             log.info("Guardando imagen por Archivo con id: "+img.getFileId());
             return img;

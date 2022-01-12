@@ -1,0 +1,208 @@
+@keyframes border_red {
+	0% {
+		outline: #339158 solid 1px;
+		background-color: #ff01010e;
+	}
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);
+    }
+}
+ 
+
+ @-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to { 
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+@-webkit-keyframes shake {
+	10%,
+	90% {
+		-webkit-transform: translate3d(-1px, -1px, 0);
+	}
+	20%,
+	80% {
+		-webkit-transform: translate3d(1px, 1px, 0);
+	}
+	30%,
+	50%,
+	70% {
+		-webkit-transform: translate3d(-1px, 1px, 0);
+	}
+	40%,
+	60% {
+		-webkit-transform: translate3d(1px, -1px, 0);
+	}
+}
+
+@keyframes shake {
+	10%,
+	90% {
+		transform: translate3d(-1px, -1px, 0);
+	}
+	20%,
+	80% {
+		transform: translate3d(1px, 1px, 0);
+	}
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-1px, 1px, 0);
+	}
+	40%,
+	60% {
+		transform: translate3d(1px, -1px, 0);
+	}
+}
+
+.delete_modal_container {
+	width: 40rem;
+	height: 27rem;
+	background-color: #fff;
+	margin: auto auto;
+	border-radius: 1.2rem;
+	padding: 3rem;
+}
+.delete_modal_container_form {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.delete_modal_container_title {
+	font-weight: 500;
+	font-size: 2.4rem;
+	line-height: 3rem;
+	color: #333333;
+}
+.delete_modal_container_description {
+	margin-top: 2rem;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 19px;
+	color: #4f4f4f;
+}
+.delete_modal_container_description > span {
+	font-weight: bold;
+}
+.delete_modal_container_input {
+	margin-top: 2rem;
+	width: 100%;
+	height: 4rem;
+	border: 0.1rem solid #4f4f4f;
+	border-radius: 12px;
+	padding: 0 2rem;
+	font-size: 1.4rem;
+	transform: translate3d(0, 0, 0);
+}
+.delete_modal_container_input:focus {
+	filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
+	outline: none;
+}
+.delete_modal_container_btns {
+	margin-top: 2rem;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.delete_modal_container_btns > button {
+	margin: auto 0;
+	height: 5rem;
+	width: 14rem;
+	box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+	color: #fff;
+	border: none;
+	font-weight: bold;
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	color: #ffffff;
+	transition: width 1s;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.delete_modal_container_btns button:first-child {
+	background-color: red;
+}
+.delete_modal_container_btns button:first-child:hover {
+	background-color: rgb(173, 0, 0);
+}
+.delete_modal_container_btns button:last-child {
+	background-color: #3db46d;
+}
+.delete_modal_container_btns button:last-child:hover {
+	background-color: #339158;
+}
+.delete_modal_container_loading, .delete_modal_container_error, .delete_modal_container_successfull {
+	margin: auto;
+}
+.delete_modal_container_loading>div {
+	border: solid 6px rgb(201, 54, 54);
+	border-radius: 50%;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	width: 8rem;
+	height: 8rem;
+	-webkit-animation-name: rotate;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	transition: all 0.5s ease-in;
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.delete_modal_container_successfull{
+    width: 8rem;
+	height: 8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: rgb(21, 121, 54);
+}
+.delete_modal_container_successfull::before{
+    display: flex;
+    content: url(../../assets/done_icon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 80%;
+    height: 80%;
+}
+.delete_modal_container_error{
+    width: 8rem;
+	height: 8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: rgb(201, 54, 54);
+}
+.delete_modal_container_error::before{
+    display: flex;
+    content: url(../../assets/report_problem_icon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 60%;
+    height: 60%;
+	margin: auto;
+}
+.delete_modal_container_message{
+	justify-content: flex-end;
+
+}

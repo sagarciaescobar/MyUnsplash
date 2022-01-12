@@ -17,6 +17,7 @@ public class Image {
     @Column(length = 36,nullable = false,updatable = false)
     private String fileId;
     private String fileName;
+    private String uploadDate;
     private String label;
     private String fileType;
     private String filePath;

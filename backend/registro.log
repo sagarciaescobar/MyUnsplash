@@ -95,3 +95,8 @@
 2022-35-09 10:35:50.479  INFO --- [PRODUCTS-API  ] [ustomAuthenticationFilter: 41] Password is: password
 2022-35-09 10:35:50.843  INFO --- [PRODUCTS-API  ] [UserServiceImpl   : 64] User found in the database: default
 2022-55-09 12:55:06.516  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 65] Guardando imagen por Url con id: 28cb4dec-efe1-4207-98f5-c033fa115096
+2022-04-09 15:04:22.664  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 67] Guardando imagen por Url con id: 89bd34f0-7343-4b1d-9289-8abdcb2f6a1b
+2022-42-09 16:42:35.025  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 44] Listando todas las imagenes
+2022-57-09 16:57:19.364  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 73] Guardando imagen por Url con id: 69938296-ff29-4efa-bb22-fc1e8b8d9ef2
+2022-10-09 17:10:29.443  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 74] Guardando imagen por Url con id: 86bbaa19-0148-4ab8-9c6a-e0b1b1da528e
+2022-10-09 17:10:46.650  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 49] Listando todas las imagenes

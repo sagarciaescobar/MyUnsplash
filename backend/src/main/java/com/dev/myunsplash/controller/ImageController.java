@@ -20,6 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @Log4j
+@CrossOrigin(value = {"*"}, methods = {RequestMethod.GET,RequestMethod.DELETE})
 public class ImageController {
 
     @Autowired
@@ -32,7 +33,7 @@ public class ImageController {
                 .body(images);
     }
 
-    @GetMapping(value = "/images/{id}",produces = {"image/jpg","image/png","image/gif"})
+    @GetMapping(value = "/images/{id}",produces = {"image/*"})
     public ResponseEntity<?> downloadImage(@PathVariable String id) throws Exception {
         ByteArrayResource inputStream = imageServiceImpl.downloadImage(id);
         return ResponseEntity
