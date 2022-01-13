@@ -1,0 +1,71 @@
+.add_photo_file_container_form{
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: 1rem;
+}
+
+.add_photo_file_container_form > label{
+    font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 19px;
+	color: #4f4f4f;
+}
+.add_photo_file_container_form > input, .add_photo_file_container_form_inputfile{
+    border: 1px solid #4f4f4f;
+	box-sizing: border-box;
+	filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
+	border-radius: 12px;
+	height: 4rem;
+	padding: 0 2rem;
+	font-size: 1.4rem;
+}
+
+.add_photo_file_container_form_inputfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #73bb90;
+    border: none;
+    color: rgb(255, 255, 255);
+}
+
+.add_photo_file_container_form_inputfile:hover{
+    background-color: #449c67;
+}
+
+.add_photo_file_container_form_btns{
+    height: 4rem;
+	width: 100%;
+	text-align: end;
+}
+.add_photo_file_container_form_btns > button {
+	height: 4rem;
+}
+.add_photo_file_container_form_btns >button:first-child{
+    background: none;
+    border: none;
+    margin-right: 1rem;
+    padding: 0 2rem;
+    color: #756f6f;
+}
+.add_photo_file_container_form_btns >button:first-child:hover{
+    color: #312f2f;
+}
+
+.add_photo_file_container_form_btns > button:last-child {
+	background: #3db46d;
+	box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+    width: 10rem;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0 2rem;
+}
+
+.add_photo_file_container_form_btns > button:last-child:hover{
+    background:#2a804c;
+}
