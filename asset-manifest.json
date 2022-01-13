@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/MyUnsplash/static/css/main.73a93555.css",
+    "main.js": "/MyUnsplash/static/js/main.1d0fef3d.js",
+    "static/js/787.6de14f3c.chunk.js": "/MyUnsplash/static/js/787.6de14f3c.chunk.js",
+    "static/media/my_unsplash_logo.svg": "/MyUnsplash/static/media/my_unsplash_logo.c888ca72341518f28eb4c46adc4836f2.svg",
+    "index.html": "/MyUnsplash/index.html",
+    "static/media/public_icon.svg": "/MyUnsplash/static/media/public_icon.31bf2e2246679646baaa0a7732aae548.svg",
+    "static/media/upload_file_icon.svg": "/MyUnsplash/static/media/upload_file_icon.a32a910e9af09dacb73cacb584a157c6.svg",
+    "static/media/search_icon.svg": "/MyUnsplash/static/media/search_icon.6c95e853cf5a1eedd6e285cecedda3a3.svg",
+    "static/media/close_white_icon.svg": "/MyUnsplash/static/media/close_white_icon.604f17ae9e7f7ab96de76a3408313180.svg",
+    "static/media/report_problem_icon.svg": "/MyUnsplash/static/media/report_problem_icon.72b230e277b748c3b4f8.svg",
+    "static/media/arrow_back_icon.svg": "/MyUnsplash/static/media/arrow_back_icon.02ad63459cc3a95bf50d2c60c2d63bac.svg",
+    "static/media/done_icon.svg": "/MyUnsplash/static/media/done_icon.ad4c28841e4fa9d960f4.svg",
+    "main.73a93555.css.map": "/MyUnsplash/static/css/main.73a93555.css.map",
+    "main.1d0fef3d.js.map": "/MyUnsplash/static/js/main.1d0fef3d.js.map",
+    "787.6de14f3c.chunk.js.map": "/MyUnsplash/static/js/787.6de14f3c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73a93555.css",
+    "static/js/main.1d0fef3d.js"
+  ]
+}
