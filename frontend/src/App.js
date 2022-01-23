@@ -13,7 +13,7 @@ function App() {
 		<Layout>
 			<BrowserRouter>
 				<Routes>
-					<Route path='/' element={<Home />} />
+					<Route path='/MyUnsplash/' element={<Home />} />
 				</Routes>
 			</BrowserRouter>
 		</Layout>

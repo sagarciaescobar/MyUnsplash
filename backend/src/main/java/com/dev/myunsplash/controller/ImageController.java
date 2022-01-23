@@ -20,7 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @Log4j
-@CrossOrigin(value = {"*"}, methods = {RequestMethod.GET,RequestMethod.DELETE})
+@CrossOrigin(value = {"*"}, methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE})
 public class ImageController {
 
     @Autowired

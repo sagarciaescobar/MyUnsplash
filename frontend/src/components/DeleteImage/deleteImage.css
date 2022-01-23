@@ -6,24 +6,22 @@
 }
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to { 
-        transform: rotate(360deg);
-    }
-}
- 
-
- @-webkit-keyframes rotate {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to { 
-        -webkit-transform: rotate(360deg);
-    }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
 
 @-webkit-keyframes shake {
 	10%,
@@ -145,10 +143,12 @@
 .delete_modal_container_btns button:last-child:hover {
 	background-color: #339158;
 }
-.delete_modal_container_loading, .delete_modal_container_error, .delete_modal_container_successfull {
+.delete_modal_container_loading,
+.delete_modal_container_error,
+.delete_modal_container_successfull {
 	margin: auto;
 }
-.delete_modal_container_loading>div {
+.delete_modal_container_loading > div {
 	border: solid 6px rgb(201, 54, 54);
 	border-radius: 50%;
 	border-right-color: transparent;
@@ -165,44 +165,43 @@
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
-.delete_modal_container_successfull{
-    width: 8rem;
+.delete_modal_container_successfull {
+	width: 8rem;
 	height: 8rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    background-color: rgb(21, 121, 54);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(21, 121, 54);
 }
-.delete_modal_container_successfull::before{
-    display: flex;
-    content: url(../../assets/done_icon.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    width: 80%;
-    height: 80%;
+.delete_modal_container_successfull::before {
+	display: flex;
+	content: url(../../assets/done_icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	object-fit: cover;
+	width: 80%;
+	height: 80%;
 }
-.delete_modal_container_error{
-    width: 8rem;
+.delete_modal_container_error {
+	width: 8rem;
 	height: 8rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    background-color: rgb(201, 54, 54);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(201, 54, 54);
 }
-.delete_modal_container_error::before{
-    display: flex;
-    content: url(../../assets/report_problem_icon.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    width: 60%;
-    height: 60%;
+.delete_modal_container_error::before {
+	display: flex;
+	content: url(../../assets/report_problem_icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	object-fit: cover;
+	width: 60%;
+	height: 60%;
 	margin: auto;
 }
-.delete_modal_container_message{
+.delete_modal_container_message {
 	justify-content: flex-end;
-
 }

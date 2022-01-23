@@ -1,29 +1,37 @@
-import React, { useRef,useEffect } from "react";
-
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useRef, useEffect } from "react";
 import useApi from "../../Hook/useApi";
-
 import "./addPhotoByUrl.css";
 
-export default function AddPhotoByUrl({ handleCancel }) {
-	const { response, loading, setLoading, error, setParams } = useApi();
+export default function AddPhotoByUrl({ handleCancel, setLoading, setError }) {
+	const {
+		response,
+		loading: apiLoading,
+		setLoading: setLodingApi,
+		error: errorApi,
+		setParams,
+	} = useApi();
+
+	const form = useRef(null);
 
 	const inputLabel = useRef(null);
 	const inputUrl = useRef(null);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		const data = new FormData();
 		if (e.target[0].value !== "" || e.target[1].value !== "") {
-			const data = new FormData();
-			data.append("label",e.target[0].value)
-			data.append("url",e.target[1].value)
+			data.append("url", e.target[1].value);
+			data.append("label", e.target[0].value);
+			setLodingApi(true);
 			setParams({
-				method:"POST",
-				url:"/api/images/save",
-				headers:{
-					"Content-Type":"multipart/form-data"
+				method: "post",
+				url: "/api/images/save",
+				headers: {
+					"Content-Type": `multipart/form-data; boundary=${data._boundary}`,
 				},
-				data:data
-			})
+				data: data,
+			});
 		} else {
 			if (e.target[0].value === "") {
 				inputLabel.current.style.animation =
@@ -41,20 +49,26 @@ export default function AddPhotoByUrl({ handleCancel }) {
 	};
 
 	useEffect(() => {
-		if(response)console.log(response)
-	}, [response])
+		if (response) console.log(response);
+	}, [response]);
 
-	useEffect(()=>{},[error])
+	useEffect(() => {
+		setLoading(apiLoading);
+	}, [apiLoading]);
+
+	useEffect(() => {
+		if (errorApi) setError(errorApi);
+	}, [errorApi]);
 
 	return (
 		<div className='add_photo_options_container'>
-			<form onSubmit={handleSubmit} className='add_photo_url_container_form'>
-				<label>Label</label>
-				<input ref={inputLabel} type='text' placeholder='label' />
-				<label>Photo url</label>
-				<input ref={inputUrl} type='text' placeholder='url' />
+			<form ref={form} onSubmit={handleSubmit} className='add_photo_url_container_form'>
+				<label style={{display: apiLoading ? "none":"block"}}>Label</label>
+				<input ref={inputLabel} style={{display: apiLoading ? "none":"block"}} type='text' placeholder='label' />
+				<label style={{display: apiLoading ? "none":"block"}}>Photo url</label>
+				<input style={{display: apiLoading ? "none":"block"}} ref={inputUrl} type='text' placeholder='url' />
 				<div className='add_photo_url_container_form_btns'>
-					<button type='button' onClick={handleCancel}>
+					<button style={{display: apiLoading ? "none":"inline-block"}} type='button' onClick={handleCancel}>
 						Cancel
 					</button>
 					<button type='submit'>Submit</button>

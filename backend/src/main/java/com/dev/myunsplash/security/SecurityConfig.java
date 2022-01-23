@@ -15,8 +15,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import static org.springframework.http.HttpMethod.DELETE;
-import static org.springframework.http.HttpMethod.GET;
+import static org.springframework.http.HttpMethod.*;
 
 @Configuration @EnableWebSecurity @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -36,6 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.authorizeRequests().antMatchers(GET,"/api/login/**").permitAll();
         http.authorizeRequests().antMatchers(GET,"/api/images/**").permitAll();
+        http.authorizeRequests().antMatchers(POST,"/api/images/save").permitAll();
         http.authorizeRequests().antMatchers(DELETE,"/api/images/**").hasAuthority("ROLE_USER");
         http.authorizeRequests().antMatchers("/api/user/**").hasAuthority("ROLE_ADMIN");
         http.authorizeRequests().antMatchers("/api/role/**").hasAuthority("ROLE_ADMIN");

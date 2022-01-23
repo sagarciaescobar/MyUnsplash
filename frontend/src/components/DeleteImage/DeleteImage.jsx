@@ -162,6 +162,7 @@ export default function DeleteImage(props) {
 									? "loading"
 									: "successfull"
 							}`}>
+								<div></div>
 						</div>
 					) : (
 						<>

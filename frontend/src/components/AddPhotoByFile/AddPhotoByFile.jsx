@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useApi from "../../Hook/useApi";
 
 import "./addPhotoByFile.css";
