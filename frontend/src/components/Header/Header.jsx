@@ -5,7 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import AddPhoto from "../AddPhoto/AddPhoto";
 import { useState } from "react";
 
-export default function Header() {
+export default function Header(props) {
 
 	const [show, setShow] = useState(false)
 
@@ -16,7 +16,7 @@ export default function Header() {
 	return (
 		<header className='header_container'>
 			<img className='header_container_logo' src={Logo} alt='Logo unsplash' />
-			<SearchBar />
+			<SearchBar {...props} />
 			<button onClick={handleClick} className="header_container_btn" type='button'>Add a photo</button>
 			<AddPhoto show={show} setShow={setShow}/>
 		</header>

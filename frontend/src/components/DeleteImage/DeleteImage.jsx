@@ -59,7 +59,7 @@ export default function DeleteImage(props) {
 				"shake 1s linear 1 normal none, border_red 1s step-end 1 normal none";
 			setTimeout(() => {
 				formInput.style.animation = "none";
-			}, 2000);
+			}, 1500);
 		} else {
 			const data = new URLSearchParams();
 			data.append("username", "default");
@@ -114,7 +114,7 @@ export default function DeleteImage(props) {
 			}
 			setTimeout(() => {
 				props.setShow((prev) => !prev);
-			}, 2000);
+			}, 1500);
 		}
 	}, [deleteImage]);
 

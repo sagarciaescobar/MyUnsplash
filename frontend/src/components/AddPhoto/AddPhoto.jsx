@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from "react";
 import AddPhotoByFile from "../AddPhotoByFile/AddPhotoByFile";
 import AddPhotoByUrl from "../AddPhotoByUrl/AddPhotoByUrl";
@@ -15,8 +16,7 @@ export default function AddPhoto(props) {
 	const [state, setState] = useState(undefined);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(false);
-
-	const formContainer = useRef(null);
+	const addPhotoContainer = useRef(null);
 
 	const handleGoBack = () => {
 		setState(undefined);
@@ -27,12 +27,38 @@ export default function AddPhoto(props) {
 		props.setShow(false);
 	};
 
-	//useEffect(() => {
-	//}, [loading])
+	useEffect(() => {
+		if (loading) {
+			addPhotoContainer.current.classList.add(
+				"add_photo_container_loading_state"
+			);
+		}
+		if (error) {
+			setState("ERROR");
+		}
+	}, [loading]);
+
+	useEffect(() => {
+		if (state === "SUCCESSFULL") {
+			setTimeout(() => {
+				setState(undefined);
+				props.setShow(false);
+				console.log("recarga");
+				window.location.reload();
+			}, 2000);
+		}
+		if (state === "ERROR") {
+			setTimeout(() => {
+				setState(undefined);
+				setError(false);
+				props.setShow(false);
+			}, 3000);
+		}
+	}, [state]);
 
 	return (
 		<Modal show={props.show}>
-			<div className='add_photo_container'>
+			<div ref={addPhotoContainer} className='add_photo_container'>
 				<div
 					style={{ display: loading ? "block" : "none" }}
 					className='add_photo_container_loading'>
@@ -43,13 +69,15 @@ export default function AddPhoto(props) {
 					className='add_photo_container_header'>
 					<h3 className='add_photo_container_title'>Add a new photo</h3>
 					{state ? (
-						<IconButton onClick={handleGoBack} icon={<ArrowBackIcon />} />
+						state === "SUCCESSFULL" || state === "ERROR" ? null : (
+							<IconButton onClick={handleGoBack} icon={<ArrowBackIcon />} />
+						)
 					) : (
 						<IconButton onClick={handleCancel} icon={<CloseIcon />} />
 					)}
 				</div>
 				{state === undefined ? (
-					<div ref={formContainer} className='add_photo_options_container'>
+					<div className='add_photo_options_container'>
 						<div className='add_photo_options_container_btns'>
 							<button
 								onClick={() => {
@@ -74,13 +102,24 @@ export default function AddPhoto(props) {
 						handleCancel={handleCancel}
 						setLoading={setLoading}
 						setError={setError}
+						setState={setState}
 					/>
-				) : (
+				) : state === "FILE" ? (
 					<AddPhotoByFile
 						handleCancel={handleCancel}
 						setLoading={setLoading}
 						setError={setError}
+						setState={setState}
 					/>
+				) : state === "SUCCESSFULL" ? (
+					<div className='add_photo_container_successfull'>
+						<div></div>
+					</div>
+				) : (
+					<div className="add_photo_error_container">
+						<div className='add_photo_container_error'></div>
+						<p>{error.message}<br/>Try again later</p>
+					</div>
 				)}
 			</div>
 		</Modal>

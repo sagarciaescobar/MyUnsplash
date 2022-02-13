@@ -1,8 +1,8 @@
 import React from 'react'
 import ImagesContainer from '../../components/ImagesContainer/ImagesContainer'
 
-export default function Home() {
+export default function Home(props) {
     return (
-        <ImagesContainer/>
+        <ImagesContainer filter={props.filter} setLabels={props.setLabels}/>
     )
 }

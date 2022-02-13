@@ -26,6 +26,8 @@
 	height: 4rem;
 	width: 100%;
 	text-align: end;
+	display: flex;
+	justify-content: flex-end;
 }
 .add_photo_url_container_form_btns > button {
 	height: 4rem;
@@ -50,6 +52,7 @@
     color: white;
     font-weight: bold;
     padding: 0 2rem;
+	transition: all 0.5s ease-in;
 }
 
 .add_photo_url_container_form_btns > button:last-child:hover{

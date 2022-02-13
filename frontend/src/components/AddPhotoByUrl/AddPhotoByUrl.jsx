@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from "react";
 import useApi from "../../Hook/useApi";
 import "./addPhotoByUrl.css";
 
-export default function AddPhotoByUrl({ handleCancel, setLoading, setError }) {
+export default function AddPhotoByUrl({ handleCancel, setLoading, setError,setState }) {
 	const {
 		response,
 		loading: apiLoading,
@@ -13,9 +13,9 @@ export default function AddPhotoByUrl({ handleCancel, setLoading, setError }) {
 	} = useApi();
 
 	const form = useRef(null);
-
 	const inputLabel = useRef(null);
 	const inputUrl = useRef(null);
+	const submitBtn = useRef(null);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -49,11 +49,40 @@ export default function AddPhotoByUrl({ handleCancel, setLoading, setError }) {
 	};
 
 	useEffect(() => {
-		if (response) console.log(response);
+		if (response) {
+			if(response.status === 201){
+				setState("SUCCESSFULL")
+				submitBtn.current.innerText = "Submited"
+			}else{
+				setState("ERROR")
+			}
+			setLoading(false)
+		}
 	}, [response]);
 
 	useEffect(() => {
 		setLoading(apiLoading);
+		if(apiLoading){
+			form.current.childNodes.forEach((ele,i)=>{
+				if(i<=3){
+					ele.style.display = "none"
+				}
+			})
+			form.current.childNodes[4].childNodes[0].style.display = "none"
+			form.current.style.height = "5rem"
+			submitBtn.current.style.width = "100%"
+			submitBtn.current.innerText = "Submiting"
+		}else{
+			form.current.childNodes.forEach((ele,i)=>{
+				if(i<=3){
+					ele.style.display = "block"
+				}
+			})
+			form.current.style.height = "20rem"
+			form.current.childNodes[4].childNodes[0].style.display = "block"
+			submitBtn.current.style.width = "10rem"
+			submitBtn.current.innerText = "Submit"
+		}
 	}, [apiLoading]);
 
 	useEffect(() => {
@@ -61,17 +90,17 @@ export default function AddPhotoByUrl({ handleCancel, setLoading, setError }) {
 	}, [errorApi]);
 
 	return (
-		<div className='add_photo_options_container'>
+		<div className='add_photo_options_container' style={{height: apiLoading ? "5rem":"20rem"}}>
 			<form ref={form} onSubmit={handleSubmit} className='add_photo_url_container_form'>
-				<label style={{display: apiLoading ? "none":"block"}}>Label</label>
-				<input ref={inputLabel} style={{display: apiLoading ? "none":"block"}} type='text' placeholder='label' />
-				<label style={{display: apiLoading ? "none":"block"}}>Photo url</label>
-				<input style={{display: apiLoading ? "none":"block"}} ref={inputUrl} type='text' placeholder='url' />
+				<label>Label</label>
+				<input ref={inputLabel} type='text' placeholder='label' />
+				<label>Photo url</label>
+				<input ref={inputUrl} type='text' placeholder='url' />
 				<div className='add_photo_url_container_form_btns'>
-					<button style={{display: apiLoading ? "none":"inline-block"}} type='button' onClick={handleCancel}>
+					<button type='button' onClick={handleCancel}>
 						Cancel
 					</button>
-					<button type='submit'>Submit</button>
+					<button ref={submitBtn} type='submit'>Submit</button>
 				</div>
 			</form>
 		</div>

@@ -7,7 +7,7 @@ import "./imagesContainer.css";
 import ImageBox from "../ImageBox/ImageBox";
 import useApi from "../../Hook/useApi";
 
-export default function ImagesContainer() {
+export default function ImagesContainer({filter ,setLabels}) {
 
 	const [images, setImages] = useState([]);
 	const {
@@ -29,8 +29,16 @@ export default function ImagesContainer() {
 	useEffect(() => {
 		if (dataImagesApi) {
 			setImages(dataImagesApi.data);
+			setLabels(dataImagesApi.data.map(img =>img.label))
 		}
 	}, [dataImagesApi]);
+
+	useEffect(()=>{
+		if(filter){
+			const listImageFiltered = dataImagesApi.data.filter(img=>img.label.includes(filter))
+			setImages(listImageFiltered)
+		}
+	},[filter])
 
 	const handleRemove = (id) =>{
 		setImages(prev => prev.filter(img => img.fileId !== id))

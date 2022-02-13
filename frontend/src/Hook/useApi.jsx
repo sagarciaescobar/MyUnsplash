@@ -5,7 +5,7 @@ const useApi = () => {
 	axios.defaults.baseURL = "https://myunsplash-app.herokuapp.com/";
 
 	const [response, setResponse] = useState(undefined);
-	const [error, setError] = useState("");
+	const [error, setError] = useState(undefined);
 	const [loading, setLoading] = useState(false);
 	const [params, setParams] = useState(undefined);
 
