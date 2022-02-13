@@ -100,7 +100,7 @@ public class ImageServiceImpl implements IImageService{
             Files.write(path,data);
             image.setFilePath(path.toString());
             image.setFileId(imageSave.getFileId());
-            image.setFileUrl("https://myunsplash-app.herokuapp.com/"+image.getFileId());
+            image.setFileUrl("https://myunsplash-app.herokuapp.com/api/images/"+image.getFileId());
             image.setUploadDate(sdf.format(new Timestamp(System.currentTimeMillis())));
             Image img = imageRepository.save(image);
             log.info("Guardando imagen por Archivo con id: "+img.getFileId());
@@ -130,10 +130,15 @@ public class ImageServiceImpl implements IImageService{
     @Override
     public ByteArrayResource downloadImage(String id) throws Exception {
         log.info("descargando imagen");
+        System.out.println(id);
         Image image = imageRepository.getById(id);
         if(image.getFilePath() == null){
             throw new Exception("Este recurso no esta disponible");
         }
-        return new ByteArrayResource(Files.readAllBytes(Paths.get(image.getFileUrl())));
+        System.out.println(image);
+        System.out.println(image.getFilePath());
+        System.out.println(image.getFilePath());
+        System.out.println(image.getFileType());
+        return new ByteArrayResource(Files.readAllBytes(Paths.get(image.getFilePath())));
     }
 }

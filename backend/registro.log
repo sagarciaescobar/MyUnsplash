@@ -100,3 +100,19 @@
 2022-57-09 16:57:19.364  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 73] Guardando imagen por Url con id: 69938296-ff29-4efa-bb22-fc1e8b8d9ef2
 2022-10-09 17:10:29.443  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 74] Guardando imagen por Url con id: 86bbaa19-0148-4ab8-9c6a-e0b1b1da528e
 2022-10-09 17:10:46.650  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  : 49] Listando todas las imagenes
+2022-38-23 21:38:46.748  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :106] Guardando imagen por Archivo con id: 1376bf9d-bb78-4680-88e6-22452fa04481
+2022-42-23 21:42:28.255  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :106] Guardando imagen por Archivo con id: 21bef182-cb6a-4487-bd1c-0f887cdd6f89
+2022-46-23 21:46:36.090  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-47-23 21:47:40.286  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-48-23 21:48:44.909  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-49-23 21:49:19.501  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-50-23 21:50:13.133  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-07-23 22:07:11.010  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :106] Guardando imagen por Archivo con id: 586969bd-6c8c-4fb3-9d7b-522e5ef28c23
+2022-08-23 22:08:44.610  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-52-23 22:52:54.820  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-55-23 22:55:31.869  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-00-23 23:00:21.786  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-01-23 23:01:36.613  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-03-23 23:03:45.926  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-10-23 23:10:54.885  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen
+2022-11-23 23:11:13.623  INFO --- [PRODUCTS-API  ] [ImageServiceImpl  :132] descargando imagen

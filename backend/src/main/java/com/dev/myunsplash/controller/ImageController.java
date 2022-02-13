@@ -6,6 +6,7 @@ import com.dev.myunsplash.service.ImageServiceImpl;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,8 +34,8 @@ public class ImageController {
                 .body(images);
     }
 
-    @GetMapping(value = "/images/{id}",produces = {"image/*"})
-    public ResponseEntity<?> downloadImage(@PathVariable String id) throws Exception {
+    @GetMapping(value = "/images/{id}",produces = {"image/jpg","image/png","image/gif"})
+    public ResponseEntity<Resource> downloadImage(@PathVariable String id) throws Exception {
         ByteArrayResource inputStream = imageServiceImpl.downloadImage(id);
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -42,7 +43,7 @@ public class ImageController {
                 .body(inputStream);
     }
 
-    @PostMapping(value = "/images/save")
+    @PostMapping(value = "/images/save",params = {"file","label"})
     public ResponseEntity<Image> saveByFile(@RequestParam("file") MultipartFile file,@RequestParam("label") String label) throws Exception {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/images/save").toUriString());
         return ResponseEntity.created(uri).body(imageServiceImpl.uploadImage(file,label));
