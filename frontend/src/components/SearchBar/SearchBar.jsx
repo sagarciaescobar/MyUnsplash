@@ -43,6 +43,8 @@ export default function SearchBar({ filter, setFilter, labels }) {
 				.filter((label) => label.includes(state))
 				.filter((l, i) => i < 5);
 			setFilteredLabels(filterArray);
+		}else{
+			setFilter(undefined)
 		}
 	}, [state]);
 

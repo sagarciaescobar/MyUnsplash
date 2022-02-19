@@ -43,7 +43,7 @@ export default function AddPhotoByFile({ handleCancel, setLoading, setError,setS
 			setLoadingApi(true);
 			setParams({
 				method: "post",
-				url: "/api/images/save",
+				url: "/api/images/saveByFile",
 				headers: {
 					"Content-Type": `multipart/form-data`,
 				},

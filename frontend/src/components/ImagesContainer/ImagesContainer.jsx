@@ -38,6 +38,9 @@ export default function ImagesContainer({filter ,setLabels}) {
 			const listImageFiltered = dataImagesApi.data.filter(img=>img.label.includes(filter))
 			setImages(listImageFiltered)
 		}
+		if(filter === undefined){
+			setImages(dataImagesApi.data)
+		}
 	},[filter])
 
 	const handleRemove = (id) =>{

@@ -26,7 +26,7 @@ export default function AddPhotoByUrl({ handleCancel, setLoading, setError,setSt
 			setLodingApi(true);
 			setParams({
 				method: "post",
-				url: "/api/images/save",
+				url: "/api/images/saveByUrl",
 				headers: {
 					"Content-Type": `multipart/form-data; boundary=${data._boundary}`,
 				},
