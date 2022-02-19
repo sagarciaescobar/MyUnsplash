@@ -33,23 +33,13 @@ public class ImageController {
         return ResponseEntity.ok()
                 .body(images);
     }
-
-    @GetMapping(value = "/images/{id}",produces = {"image/jpg","image/png","image/gif"})
-    public ResponseEntity<Resource> downloadImage(@PathVariable String id) throws Exception {
-        ByteArrayResource inputStream = imageServiceImpl.downloadImage(id);
-        return ResponseEntity
-                .status(HttpStatus.OK)
-                .contentLength(inputStream.contentLength())
-                .body(inputStream);
-    }
-
-    @PostMapping(value = "/images/save",params = {"file","label"})
+    @PostMapping(value = "/images/saveByFile")
     public ResponseEntity<Image> saveByFile(@RequestParam("file") MultipartFile file,@RequestParam("label") String label) throws Exception {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/images/save").toUriString());
         return ResponseEntity.created(uri).body(imageServiceImpl.uploadImage(file,label));
     }
 
-    @PostMapping(value = "/images/save",params = {"url","label"})
+    @PostMapping(value = "/images/saveByUrl")
     public ResponseEntity<Image> saveByUrl(@RequestParam("url") String url,@RequestParam("label") String label) throws IOException, URISyntaxException, InterruptedException, NoSuchAImage {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/images/save").toUriString());
         return ResponseEntity.created(uri).body(imageServiceImpl.saveByUrl(url,label));

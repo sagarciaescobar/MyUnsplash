@@ -12,7 +12,6 @@ import java.util.List;
 public interface IImageService {
     List<Image> findAll();
     Image saveByUrl(String url,String label) throws IOException, URISyntaxException, InterruptedException, NoSuchAImage;
-    ByteArrayResource downloadImage(String id) throws Exception;
     Image uploadImage(MultipartFile file, String label) throws Exception;
     void deleteById(String id) throws Exception;
 }

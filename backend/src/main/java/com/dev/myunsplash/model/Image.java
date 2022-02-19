@@ -20,14 +20,12 @@ public class Image {
     private String uploadDate;
     private String label;
     private String fileType;
-    private String filePath;
     private String fileUrl;
 
-    public Image(String fileName, String label, String fileType, String filePath, String fileUrl) {
+    public Image(String fileName, String label, String fileType, String fileUrl) {
         this.fileName = fileName;
         this.label = label;
         this.fileType = fileType;
-        this.filePath = filePath;
         this.fileUrl = fileUrl;
     }
 
