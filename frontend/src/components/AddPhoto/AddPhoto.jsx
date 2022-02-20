@@ -1,8 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import AddPhotoByFile from "../AddPhotoByFile/AddPhotoByFile";
 import AddPhotoByUrl from "../AddPhotoByUrl/AddPhotoByUrl";
 import Modal from "../Modal/Modal";
+import useAddPhoto from "./useAddPhoto";
+
 
 import { ReactComponent as UrlIcon } from "../../assets/public_icon.svg";
 import { ReactComponent as UploadFileIcon } from "../../assets/upload_file_icon.svg";
@@ -13,48 +14,17 @@ import "./addphoto.css";
 import IconButton from "../IconButton/IconButton";
 
 export default function AddPhoto(props) {
-	const [state, setState] = useState(undefined);
-	const [loading, setLoading] = useState(false);
-	const [error, setError] = useState(false);
-	const addPhotoContainer = useRef(null);
-
-	const handleGoBack = () => {
-		setState(undefined);
-	};
-
-	const handleCancel = () => {
-		setState(undefined);
-		props.setShow(false);
-	};
-
-	useEffect(() => {
-		if (loading) {
-			addPhotoContainer.current.classList.add(
-				"add_photo_container_loading_state"
-			);
-		}
-		if (error) {
-			setState("ERROR");
-		}
-	}, [loading]);
-
-	useEffect(() => {
-		if (state === "SUCCESSFULL") {
-			setTimeout(() => {
-				setState(undefined);
-				props.setShow(false);
-				console.log("recarga");
-				window.location.reload();
-			}, 2000);
-		}
-		if (state === "ERROR") {
-			setTimeout(() => {
-				setState(undefined);
-				setError(false);
-				props.setShow(false);
-			}, 3000);
-		}
-	}, [state]);
+	const {
+		addPhotoContainer,
+		setLoading,
+		loading,
+		setState,
+		state,
+		handleGoBack,
+		handleCancel,
+		setError,
+		error,
+	} = useAddPhoto(props);
 
 	return (
 		<Modal show={props.show}>
@@ -70,7 +40,10 @@ export default function AddPhoto(props) {
 					<h3 className='add_photo_container_title'>Add a new photo</h3>
 					{state ? (
 						state === "SUCCESSFULL" || state === "ERROR" ? null : (
-							<IconButton onClick={handleGoBack} icon={<ArrowBackIcon height="2.4rem" />} />
+							<IconButton
+								onClick={handleGoBack}
+								icon={<ArrowBackIcon height='2.4rem' />}
+							/>
 						)
 					) : (
 						<IconButton onClick={handleCancel} icon={<CloseIcon />} />
@@ -116,9 +89,13 @@ export default function AddPhoto(props) {
 						<div></div>
 					</div>
 				) : (
-					<div className="add_photo_error_container">
+					<div className='add_photo_error_container'>
 						<div className='add_photo_container_error'></div>
-						<p>{error.message}<br/>Try again later</p>
+						<p>
+							{error.message}
+							<br />
+							Try again later
+						</p>
 					</div>
 				)}
 			</div>
