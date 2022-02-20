@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">MyUnSplash</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://www.figma.com/file/a1xUD6nInLKRz6evFKKdir">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://sagarciaescobar.github.io/MyUnsplash">
       Solution
     </a>
     <span> | </span>
@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](./MyUnsplash.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
@@ -50,9 +50,9 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+![react-17.0.2](https://img.shields.io/badge/react-17.0.2-green) ![spring-boot-2.6.1](https://img.shields.io/badge/springboot-2.6.1-green)
+
+
 
 ## Features
 
@@ -62,13 +62,21 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## How To Use
 
-<!-- Example: -->
-
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this application:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/sagarciaescobar/MyUnsplash
+```
+
+<!-- Example: -->
+- Frontend
+you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+
+# Move to frontend folder
+cd frontend
 
 # Install dependencies
 $ npm install
@@ -76,6 +84,16 @@ $ npm install
 # Run the app
 $ npm start
 ```
+
+- Backend
+you'll need [Maven](https://maven.apache.org/index.html) to import the project in your IDE by the pom file and configure enviromental varaibles in de application.property file or use this comand with project packaged
+
+```bash
+
+$ sh -c java -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8 -XX:+UseContainerSupport -DDATABASE_ACCESSURL=$DATABASE_ACCESSURL -DDATABASE_USER=$DATABASE_USERNAME -DDATABASE_PASSWORD=$DATABASE_PASSWORD -DCLOUD_NAME=$CLOUD_NAME -DCLOUD_API_KEY=$CLOUD_API_KEY -DCLOUD_API_SECRET=$CLOUD_API_SECRET -Dserver.port=$PORT -Djava.security.egd=file:/dev/./urandom -jar myunsplash.jar
+
+```
+
 
 ## Acknowledgements
 
@@ -87,6 +105,5 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
 - GitHub [@your-username](https://{github.com/your-usermame})
 - Twitter [@your-twitter](https://{twitter.com/your-username})
