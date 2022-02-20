@@ -21,7 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @Log4j
-@CrossOrigin(value = {"*"}, methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE})
+@CrossOrigin(value = {"https://sagarciaescobar.github.io/MyUnsplash/"}, methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE})
 public class ImageController {
 
     @Autowired

@@ -16,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
+@CrossOrigin(value = {"https://sagarciaescobar.github.io/MyUnsplash/"}, methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE})
 public class UserController {
 
     @Autowired
