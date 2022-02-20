@@ -70,7 +70,7 @@ export default function AddPhoto(props) {
 					<h3 className='add_photo_container_title'>Add a new photo</h3>
 					{state ? (
 						state === "SUCCESSFULL" || state === "ERROR" ? null : (
-							<IconButton onClick={handleGoBack} icon={<ArrowBackIcon />} />
+							<IconButton onClick={handleGoBack} icon={<ArrowBackIcon height="2.4rem" />} />
 						)
 					) : (
 						<IconButton onClick={handleCancel} icon={<CloseIcon />} />

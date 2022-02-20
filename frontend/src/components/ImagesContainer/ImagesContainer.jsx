@@ -39,7 +39,7 @@ export default function ImagesContainer({filter ,setLabels}) {
 			setImages(listImageFiltered)
 		}
 		if(filter === undefined){
-			setImages(dataImagesApi.data)
+			if(dataImagesApi)setImages(dataImagesApi.data)
 		}
 	},[filter])
 

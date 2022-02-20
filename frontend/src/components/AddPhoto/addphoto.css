@@ -27,8 +27,11 @@
     outline: none;
     border: none;
     border-radius: 1rem;
+	cursor: pointer;
 }
-
+.material-icons>svg {
+	height: 2.4rem;
+}
 .add_photo_container_header>button:hover{
     background:#2a804c;
 }
@@ -60,6 +63,7 @@
     border-radius: 1.2rem;
     outline: none;
     border: solid 1px;
+	cursor: pointer;
 }
 .add_photo_options_container_btns_option:hover{
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.384);
@@ -67,8 +71,8 @@
 }
 
 .add_photo_options_container_btns_option > svg{
-    width: 36px;
-    height: 36px;
+    width: 3.6rem;
+    height: 3.6rem;
 }
 .add_photo_container_loading,
 .add_photo_container_error,

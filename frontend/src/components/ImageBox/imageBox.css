@@ -20,6 +20,7 @@
     border: 0.2rem solid #EB5757;
     font-weight: bold;
     color: #EB5757;
+    cursor: pointer;
 }
 
 .box_img_delete_btn:hover{
@@ -40,3 +41,21 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+
+@media screen and (max-width:600px) {
+    .box_img_delete_btn{
+        background-color: #0000007e;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        border-radius: 1.6rem;
+        font-size: 1.6rem;
+        width: 10rem;
+        height: 4rem;
+        border: 0.2rem solid #EB5757;
+        font-weight: bold;
+        color: #EB5757;
+        cursor: pointer;
+    }
+  }

@@ -11,7 +11,7 @@
     background-color: #fff;
     border: 1px solid #BDBDBD;
     filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
-    border-radius: 12px;
+    border-radius: 1.2rem;
     z-index: 2;
 }
 
@@ -20,6 +20,7 @@
     border: none;
     margin: auto 0;
     padding: 0 2rem;
+    cursor: pointer;
 }
 
 .search_bar_container_form_input{
@@ -56,6 +57,10 @@
     border-right: none;
     border-bottom: #BDBDBD;
     border: none;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .search_bar_dropdown_search button:hover{
     background-color: #bdbdbd31;
@@ -71,3 +76,9 @@
 .search_bar_dropdown_search li:last-child>button{
     border-radius: 0 0 1.2rem 1.2rem;
 }
+
+@media screen and (max-width:600px) {
+    .search_bar_dropdown_search, .search_bar_container_form{
+        width: 80%;
+    }
+  }

@@ -24,3 +24,18 @@ body{
   flex-direction: column;
   
 }
+
+@media screen and (max-width:850px) {
+  html{
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width:420px) {
+  html{
+    font-size: 6px;
+  }
+  body{
+    padding:  0 4rem;
+  }
+}

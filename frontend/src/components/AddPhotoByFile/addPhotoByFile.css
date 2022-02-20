@@ -17,14 +17,14 @@
 .add_photo_file_container_form > label{
     font-size: 1.4rem;
 	font-weight: 500;
-	line-height: 19px;
+	line-height: 1.9rem;
 	color: #4f4f4f;
 }
 .add_photo_file_container_form > input, .add_photo_file_container_form_inputfile{
     border: 1px solid #4f4f4f;
 	box-sizing: border-box;
 	filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
-	border-radius: 12px;
+	border-radius: 1.2rem;
 	height: 4rem;
 	padding: 0 2rem;
 	font-size: 1.4rem;
@@ -37,6 +37,7 @@
     background-color: #73bb90;
     border: none;
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .add_photo_file_container_form_inputfile:hover{
@@ -52,6 +53,8 @@
 }
 .add_photo_file_container_form_btns > button {
 	height: 4rem;
+    cursor: pointer;
+    font-size: 1.6rem;
 }
 .add_photo_file_container_form_btns >button:first-child{
     background: none;
