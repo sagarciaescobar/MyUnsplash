@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MyUnsplash/static/css/main.2bb66557.css",
+    "main.css": "/MyUnsplash/static/css/main.f8d31ca5.css",
     "main.js": "/MyUnsplash/static/js/main.56da916b.js",
     "static/js/787.6de14f3c.chunk.js": "/MyUnsplash/static/js/787.6de14f3c.chunk.js",
     "static/media/my_unsplash_logo.svg": "/MyUnsplash/static/media/my_unsplash_logo.c888ca72341518f28eb4c46adc4836f2.svg",
@@ -12,12 +12,12 @@
     "static/media/report_problem_icon.svg": "/MyUnsplash/static/media/report_problem_icon.4efec3abb96b1448755c.svg",
     "static/media/arrow_back_icon.svg": "/MyUnsplash/static/media/arrow_back_icon.d2f1b765e1ad21b3d524fbdd2800248f.svg",
     "static/media/done_icon.svg": "/MyUnsplash/static/media/done_icon.fe997ed5a3bd7c137e5a.svg",
-    "main.2bb66557.css.map": "/MyUnsplash/static/css/main.2bb66557.css.map",
+    "main.f8d31ca5.css.map": "/MyUnsplash/static/css/main.f8d31ca5.css.map",
     "main.56da916b.js.map": "/MyUnsplash/static/js/main.56da916b.js.map",
     "787.6de14f3c.chunk.js.map": "/MyUnsplash/static/js/787.6de14f3c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bb66557.css",
+    "static/css/main.f8d31ca5.css",
     "static/js/main.56da916b.js"
   ]
 }
