@@ -8,13 +8,10 @@
 .cols {
     -moz-column-count:3;
     -moz-column-gap: 4.5rem;
-    -moz-column-width: 30%;
     -webkit-column-count:3;
     -webkit-column-gap: 4.5rem;
-    -webkit-column-width: 30%;
     column-count: 3;
     column-gap: 4.5rem;
-    column-width: 30%;
 }
 
 @media screen and (max-width:950px) { 
